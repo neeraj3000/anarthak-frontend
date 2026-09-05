@@ -1,0 +1,291 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   ANARTHAK (अनर्थक) — LUXURY STREETWEAR DESIGN SYSTEM
+   TAGLINE: "NOT LIKE THEM"
+   PALETTE: RED, GREY, BLACK (BOTH DARK AND LIGHT THEMES)
+   ========================================================================== */
+
+:root {
+  /* Dark Theme (Default) */
+  --bg-primary: #0A0A0C;
+  --bg-secondary: #121215;
+  --bg-elevated: #18181D;
+  --bg-subtle: #24242B;
+  
+  --text-primary: #F4F4F6;
+  --text-secondary: #A1A1AA;
+  --text-muted: #71717A;
+  --text-inverse: #0A0A0C;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-grey: #27272A;
+
+  /* Red Accents */
+  --brand-red: #FF1E27;
+  --brand-red-dark: #C90008;
+  --brand-red-glow: rgba(255, 30, 39, 0.25);
+  --brand-red-subtle: rgba(255, 30, 39, 0.12);
+
+  /* Greys */
+  --grey-50: #FAFAFA;
+  --grey-100: #F4F4F5;
+  --grey-200: #E4E4E7;
+  --grey-300: #D4D4D8;
+  --grey-400: #A1A1AA;
+  --grey-500: #71717A;
+  --grey-600: #52525B;
+  --grey-700: #3F3F46;
+  --grey-800: #27272A;
+  --grey-900: #18181B;
+
+  /* Typography */
+  --font-editorial: 'Syne', sans-serif;
+  --font-display: 'Teko', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-spec: 'JetBrains Mono', monospace;
+
+  /* Elevations */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-red: 0 0 24px rgba(255, 30, 39, 0.35);
+}
+
+/* Light Theme Override - Clean Pure White */
+html.light {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FAFAFA;
+  --bg-elevated: #FFFFFF;
+  --bg-subtle: #F4F4F5;
+
+  --text-primary: #09090B;
+  --text-secondary: #52525B;
+  --text-muted: #71717A;
+  --text-inverse: #FFFFFF;
+
+  --border-subtle: #E4E4E7;
+  --border-medium: #D4D4D8;
+  --border-grey: #E4E4E7;
+
+  --brand-red: #FF1E27;
+  --brand-red-dark: #DC2626;
+  --brand-red-glow: rgba(255, 30, 39, 0.2);
+  --brand-red-subtle: rgba(255, 30, 39, 0.08);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Container */
+.container-custom {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-custom {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+
+/* Anarthak Hallmark Badges */
+.hallmark-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  font-family: var(--font-spec);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  border-radius: 4px;
+  background: var(--brand-red-subtle);
+  color: var(--brand-red);
+  border: 1px solid rgba(255, 30, 39, 0.35);
+}
+
+.gsm-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-spec);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+html.light .gsm-tag {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons - Red / Grey / Black */
+.btn-anarthak-red {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #FF1E27;
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 13px 26px;
+  border-radius: 4px;
+  border: 1px solid #FF1E27;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-anarthak-red:hover {
+  background: #DC2626;
+  border-color: #DC2626;
+  box-shadow: 0 4px 20px rgba(255, 30, 39, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-anarthak-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #18181D;
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 13px 26px;
+  border-radius: 4px;
+  border: 1px solid #27272A;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+html.light .btn-anarthak-dark {
+  background: #FFFFFF;
+  color: #0F0F12;
+  border-color: #D4D4D8;
+}
+
+.btn-anarthak-dark:hover {
+  background: #27272A;
+  border-color: #FF1E27;
+  transform: translateY(-1px);
+}
+
+/* Inputs */
+.input-hallmark {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 11px 14px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+html.light .input-hallmark {
+  background: #FFFFFF;
+  border-color: #D4D4D8;
+  color: #0F0F12;
+}
+
+.input-hallmark:focus {
+  border-color: #FF1E27;
+  box-shadow: 0 0 0 2px rgba(255, 30, 39, 0.2);
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3F3F46;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF1E27;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

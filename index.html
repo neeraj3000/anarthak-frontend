@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anarthak — Not like them | Premium Heavyweight Streetwear</title>
+    <meta name="description" content="Anarthak (अनर्थक) — Heavyweight 300+ GSM streetwear crafted with unapologetic Indian rebellion. Not like them." />
+    <!-- Google Fonts: Syne, Plus Jakarta Sans, JetBrains Mono, Teko for iconic Indian brutalist character -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Syne:wght@500;600;700;800;900&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN for instant styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                red: '#FF1E27',
+                redDark: '#C90008',
+                redGlow: 'rgba(255, 30, 39, 0.25)',
+                black: '#0A0A0C',
+                bg: '#FFFFFF',
+                bgDark: '#0A0A0C',
+                surface: '#FFFFFF',
+                surfaceDark: '#121216',
+                border: '#E4E4E7',
+                borderDark: 'rgba(255, 255, 255, 0.08)',
+                grey: '#71717A',
+                greyDark: '#27272A',
+                greyMid: '#71717A',
+                greyLight: '#E4E4E7',
+                muted: '#A1A1AA'
+              }
+            },
+            fontFamily: {
+              editorial: ['Syne', 'sans-serif'],
+              syne: ['Syne', 'sans-serif'],
+              display: ['Teko', 'sans-serif'],
+              body: ['Plus Jakarta Sans', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace']
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-white text-zinc-900 dark:bg-[#0A0A0C] dark:text-[#F4F4F6] antialiased selection:bg-[#FF1E27] selection:text-white transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
