@@ -82,7 +82,7 @@ export const ProductDetailView = () => {
   const relatedProducts = PRODUCTS.filter((p) => p.id !== product.id).slice(0, 4);
 
   return (
-    <div className="pt-28 pb-24 bg-[var(--bg-primary)] min-h-screen transition-colors duration-200">
+    <div className="pt-24 sm:pt-28 pb-32 lg:pb-24 bg-[var(--bg-primary)] min-h-screen transition-colors duration-200">
       <div className="container-custom">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[var(--text-secondary)] mb-8 overflow-x-auto">
@@ -467,7 +467,7 @@ export const ProductDetailView = () => {
       </div>
 
       {/* Sticky Bottom Bar on Mobile */}
-      <div className="fixed bottom-12 left-0 right-0 z-30 lg:hidden bg-[var(--bg-secondary)]/95 backdrop-blur-xl border-t border-[var(--border-subtle)] p-3 shadow-2xl">
+      <div className="fixed bottom-14 left-0 right-0 z-30 lg:hidden bg-white/95 dark:bg-[#121216]/95 backdrop-blur-xl border-t border-zinc-200 dark:border-white/10 p-3 shadow-2xl">
         <div className="flex items-center justify-between gap-3">
           <div>
             <p className="text-[10px] font-mono text-[var(--text-secondary)] uppercase truncate max-w-[120px]">

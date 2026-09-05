@@ -38,7 +38,7 @@ const AppLayout = () => {
       <ScrollToTop />
       <Navbar />
 
-      <main className="flex-1">
+      <main className="flex-1 pb-16 lg:pb-0">
         <Routes>
           <Route path="/" element={<HomeView />} />
           <Route path="/shop" element={<ShopView />} />

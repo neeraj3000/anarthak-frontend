@@ -66,7 +66,7 @@ export const CartDrawer = () => {
         onClick={() => setIsCartOpen(false)}
       />
 
-      <div className="fixed inset-y-0 right-0 max-w-full flex pl-10 font-mono">
+      <div className="fixed inset-y-0 right-0 max-w-full flex pl-0 sm:pl-10 font-mono">
         <div className="w-screen max-w-md bg-[var(--bg-secondary)] border-l border-[var(--border-subtle)] shadow-2xl flex flex-col justify-between">
           {/* Header */}
           <div className="p-6 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]">

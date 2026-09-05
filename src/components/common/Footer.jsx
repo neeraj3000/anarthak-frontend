@@ -20,7 +20,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0A0A0C] border-t border-[#27272A] text-[#A1A1AA] pt-16 pb-12">
+    <footer className="bg-[#0A0A0C] border-t border-[#27272A] text-[#A1A1AA] pt-16 pb-24 lg:pb-12">
       {/* Guarantees Bar - Indian Logistics & Fabric Excellence */}
       <div className="border-b border-[#27272A] pb-12 mb-16">
         <div className="container-custom grid grid-cols-2 md:grid-cols-4 gap-8">

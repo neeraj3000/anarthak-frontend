@@ -107,8 +107,15 @@ body {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 640px) {
+  .container-custom {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -123,6 +130,10 @@ body {
     padding-left: 56px;
     padding-right: 56px;
   }
+}
+
+.safe-area-pb {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 /* Anarthak Hallmark Badges */

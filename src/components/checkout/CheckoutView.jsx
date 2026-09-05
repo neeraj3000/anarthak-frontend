@@ -168,17 +168,17 @@ export const CheckoutView = () => {
             <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-0.5 bg-brand-border dark:bg-brand-borderDark -z-0" />
             
             {[
-              { step: 1, label: 'Indian Address' },
-              { step: 2, label: 'Courier Logistics' },
-              { step: 3, label: 'Payment (UPI/RuPay)' },
-              { step: 4, label: 'Review & Confirm' }
+              { step: 1, label: 'Address', fullLabel: 'Indian Address' },
+              { step: 2, label: 'Courier', fullLabel: 'Courier Logistics' },
+              { step: 3, label: 'Payment', fullLabel: 'Payment (UPI/RuPay)' },
+              { step: 4, label: 'Review', fullLabel: 'Review & Confirm' }
             ].map((s) => (
               <div key={s.step} className="flex flex-col items-center relative z-10">
                 <button
                   onClick={() => {
                     if (s.step < currentStep) setCurrentStep(s.step);
                   }}
-                  className={`w-9 h-9 rounded-full flex items-center justify-center font-mono text-xs font-bold transition-all ${
+                  className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center font-mono text-xs font-bold transition-all ${
                     currentStep === s.step
                       ? 'bg-brand-red text-white ring-4 ring-brand-red/30'
                       : currentStep > s.step
@@ -186,12 +186,13 @@ export const CheckoutView = () => {
                       : 'bg-brand-surface dark:bg-brand-surfaceDark text-brand-grey border border-brand-border dark:border-brand-borderDark'
                   }`}
                 >
-                  {currentStep > s.step ? <Check className="w-4 h-4" /> : s.step}
+                  {currentStep > s.step ? <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> : s.step}
                 </button>
-                <span className={`text-[11px] font-mono mt-1.5 uppercase tracking-wider ${
+                <span className={`text-[10px] sm:text-[11px] font-mono mt-1 sm:mt-1.5 uppercase tracking-wider text-center ${
                   currentStep === s.step ? 'text-brand-red font-bold' : 'text-brand-grey'
                 }`}>
-                  {s.label}
+                  <span className="inline sm:hidden">{s.label}</span>
+                  <span className="hidden sm:inline">{s.fullLabel}</span>
                 </span>
               </div>
             ))}
@@ -425,7 +426,7 @@ export const CheckoutView = () => {
                 </div>
 
                 {/* Tab Switcher: UPI, RuPay Card, Netbanking, COD */}
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {[
                     { id: 'upi', label: 'UPI (GPay/PhonePe)', icon: Smartphone },
                     { id: 'card', label: 'RuPay / Cards', icon: CreditCard },
