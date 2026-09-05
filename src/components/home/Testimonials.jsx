@@ -22,7 +22,7 @@ export const Testimonials = () => {
               {'★'.repeat(5)}
             </span>
             <span className="font-bold text-[var(--text-primary)]">4.9 / 5.0 Rating</span>
-            <span>(Over 1,200+ Dispatches across India)</span>
+            <span>(Over 1,200+ Dispatches Nationwide)</span>
           </div>
         </div>
 

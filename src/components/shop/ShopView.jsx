@@ -103,7 +103,7 @@ export const ShopView = () => {
                 : activeCategoryFilter.toUpperCase()}
             </h1>
             <p className="text-xs sm:text-sm text-[var(--text-secondary)] mt-2 max-w-xl font-light font-mono">
-              Engineered with 280–340 GSM combed Indian cotton. Zero polyester blends, pre-shrunk cold washed, and guaranteed anti-bacon necklines.
+              Engineered with 280–340 GSM combed cotton. Zero polyester blends, pre-shrunk cold washed, and guaranteed anti-bacon necklines.
             </p>
           </div>
 
@@ -152,7 +152,7 @@ export const ShopView = () => {
                 onChange={(e) => setSortBy(e.target.value)}
                 className="bg-[var(--bg-elevated)] border border-[var(--border-subtle)] rounded px-3 py-2 text-xs text-[var(--text-primary)] font-mono focus:outline-none focus:border-[#FF1E27] cursor-pointer"
               >
-                <option value="featured">Featured / Indian Drops</option>
+                <option value="featured">Featured Drops</option>
                 <option value="price-low">Price: Low to High</option>
                 <option value="price-high">Price: High to Low</option>
                 <option value="gsm-high">Fabric Weight (Heaviest GSM)</option>

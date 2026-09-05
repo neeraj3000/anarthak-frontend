@@ -88,7 +88,7 @@ export const CartDrawer = () => {
               </button>
             </div>
 
-            {/* Free Indian Shipping Progress Meter */}
+            {/* Free Shipping Progress Meter */}
             <div className="mt-4 pt-3 border-t border-[var(--border-subtle)]">
               <div className="flex items-center justify-between text-[11px] mb-1.5">
                 <span className="flex items-center gap-1.5 text-[var(--text-secondary)]">
@@ -96,7 +96,7 @@ export const CartDrawer = () => {
                   {freeShippingRemaining > 0 ? (
                     <span>Add <strong className="text-[#FF1E27]">{formatPrice(freeShippingRemaining)}</strong> for Free Bluedart Air</span>
                   ) : (
-                    <span className="text-[#FF1E27] font-bold">Free Pan-India Express Shipping Unlocked!</span>
+                    <span className="text-[#FF1E27] font-bold">Free Express Shipping Unlocked!</span>
                   )}
                 </span>
                 <span className="text-zinc-500">{freeShippingProgress}%</span>
@@ -120,7 +120,7 @@ export const CartDrawer = () => {
                 <div>
                   <h4 className="font-editorial text-base font-bold text-[var(--text-primary)] mb-1">Your bag is empty</h4>
                   <p className="text-xs text-[var(--text-secondary)] max-w-xs mx-auto">
-                    Explore Drop 01 of 300+ GSM heavyweight Indian cotton silhouettes.
+                    Explore Drop 01 of 300+ GSM heavyweight combed cotton silhouettes.
                   </p>
                 </div>
                 <button

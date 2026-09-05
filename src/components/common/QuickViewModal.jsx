@@ -210,7 +210,7 @@ export const QuickViewModal = () => {
               }}
               className="w-full text-center text-xs font-mono text-brand-grey hover:text-brand-red flex items-center justify-center gap-1.5 transition-colors py-1 cursor-pointer"
             >
-              <span>View Full Indian Provenance & Specs</span>
+              <span>View Full Provenance & Specs</span>
               <ArrowRight className="w-3 h-3" />
             </button>
           </div>

@@ -25,7 +25,7 @@ export const BrandManifesto = () => {
     {
       num: "04",
       title: "UNAPOLOGETIC REBELLION",
-      desc: "Anarthak (अनर्थक) rejects mainstream Indian fast-fashion mediocrity. Every run is strictly limited, numbered, and crafted with high-density matte prints.",
+      desc: "Anarthak (अनर्थक) rejects mainstream fast-fashion mediocrity. Every run is strictly limited, numbered, and crafted with high-density matte prints.",
       tag: "NOT LIKE THEM"
     }
   ];
@@ -46,7 +46,7 @@ export const BrandManifesto = () => {
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 max-w-md mt-4 md:mt-0 font-light leading-relaxed font-mono">
-            Fast fashion in India has turned t-shirts into disposable rags. Anarthak builds heavy, uncompromising garments with the structural integrity of outerwear.
+            Fast fashion has turned t-shirts into disposable rags. Anarthak builds heavy, uncompromising garments with the structural integrity of outerwear.
           </p>
         </div>
 

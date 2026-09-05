@@ -67,7 +67,7 @@ export const CollectionsView = () => {
               {collection.description}
             </p>
             <div className="pt-2 text-xs font-mono text-brand-red font-bold">
-              <span>{items.length} SILHOUETTES CURATED FOR THIS INDIAN DROP</span>
+              <span>{items.length} SILHOUETTES CURATED FOR THIS DROP</span>
             </div>
           </div>
         </div>

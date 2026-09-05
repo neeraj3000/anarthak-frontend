@@ -67,7 +67,7 @@ export const HeroBanner = () => {
           </button>
         </div>
 
-        {/* 4 Technical Hallmark Indian Specs */}
+        {/* 4 Technical Hallmark Specs */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10 mt-16 pt-10 border-t border-zinc-200 dark:border-[#27272A] w-full text-left font-mono">
           <div>
             <span className="block text-[10px] text-[#FF1E27] uppercase tracking-widest font-bold mb-0.5">

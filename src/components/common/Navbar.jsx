@@ -59,7 +59,7 @@ export const Navbar = () => {
           </div>
           
           <div className="mx-auto md:mx-0 text-center tracking-normal sm:tracking-widest text-[10px] sm:text-[11px] font-medium text-zinc-800 dark:text-zinc-300 px-2 truncate sm:overflow-visible">
-            <span className="hidden sm:inline">FREE EXPRESS BLUEDART SHIPPING ACROSS INDIA OVER ₹1,999 • COD AVAILABLE</span>
+            <span className="hidden sm:inline">FREE EXPRESS BLUEDART SHIPPING ON ORDERS OVER ₹1,999 • COD AVAILABLE</span>
             <span className="inline sm:hidden">FREE BLUEDART SHIPPING OVER ₹1,999 • COD AVAILABLE</span>
           </div>
 

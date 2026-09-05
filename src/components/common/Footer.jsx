@@ -21,7 +21,7 @@ export const Footer = () => {
 
   return (
     <footer className="bg-[#0A0A0C] border-t border-[#27272A] text-[#A1A1AA] pt-16 pb-24 lg:pb-12">
-      {/* Guarantees Bar - Indian Logistics & Fabric Excellence */}
+      {/* Guarantees Bar - Logistics & Fabric Excellence */}
       <div className="border-b border-[#27272A] pb-12 mb-16">
         <div className="container-custom grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="flex items-start gap-3.5">
@@ -31,7 +31,7 @@ export const Footer = () => {
                 300+ GSM Tirupur Cotton
               </h4>
               <p className="text-[11px] text-zinc-400 leading-relaxed">
-                Extra-long staple Indian combed cotton. Zero polyester blends.
+                Extra-long staple combed cotton. Zero polyester blends.
               </p>
             </div>
           </div>
@@ -43,7 +43,7 @@ export const Footer = () => {
                 Bluedart Apex Air
               </h4>
               <p className="text-[11px] text-zinc-400 leading-relaxed">
-                Free 24-48 hr air shipping across India on orders over ₹1,999.
+                Free 24-48 hr air shipping on orders over ₹1,999.
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@ export const Footer = () => {
                 7-Day Easy Exchange
               </h4>
               <p className="text-[11px] text-zinc-400 leading-relaxed">
-                Doorstep courier pickup across 19,000+ Indian pincodes.
+                Doorstep courier pickup across 19,000+ pincodes.
               </p>
             </div>
           </div>
@@ -90,7 +90,7 @@ export const Footer = () => {
             "NOT LIKE THEM"
           </p>
           <p className="text-xs leading-relaxed text-zinc-400 mb-6 max-w-md font-light">
-            We reject the disposable, fragile, paper-thin fast-fashion flooding the subcontinent. Anarthak crafts heavyweight, structured, drop-shoulder luxury garments engineered from Indian combed cottons with brutalist silhouettes and raw attitude.
+            We reject the disposable, fragile, paper-thin fast-fashion flooding the market. Anarthak crafts heavyweight, structured, drop-shoulder luxury garments engineered from combed cottons with brutalist silhouettes and raw attitude.
           </p>
 
           {/* Newsletter Box */}
@@ -181,11 +181,11 @@ export const Footer = () => {
             <li className="text-zinc-500">Tirupur Heavy Combed Cotton</li>
             <li className="text-zinc-500">Anti-Bacon Collar Engineering</li>
             <li className="text-zinc-500">Pre-Shrunk Cold Wash Protocol</li>
-            <li className="text-zinc-500">Indian Climate Breathability</li>
+            <li className="text-zinc-500">All-Season Breathability</li>
           </ul>
         </div>
 
-        {/* Column 3: Indian Concierge */}
+        {/* Column 3: Concierge */}
         <div>
           <h4 className="text-xs font-bold text-white uppercase tracking-[0.18em] mb-5 font-mono text-[#FF1E27]">
             Support & Delivery
@@ -208,7 +208,7 @@ export const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Legal & Indian Payment Providers Row */}
+      {/* Bottom Legal & Payment Providers Row */}
       <div className="container-custom pt-8 border-t border-[#27272A] flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-zinc-500 font-mono">
         <div>
           © {new Date().getFullYear()} ANARTHAK (अनर्थक) STREETWEAR PVT. LTD. ALL RIGHTS RESERVED.
@@ -217,7 +217,7 @@ export const Footer = () => {
         <div className="flex items-center gap-6">
           <span>PRIVACY CHARTER</span>
           <span>TERMS OF ARCHIVE</span>
-          <span>MADE IN INDIA 🇮🇳</span>
+          <span>HEAVYWEIGHT ARCHIVE</span>
         </div>
 
         <div className="flex items-center gap-2.5 text-zinc-400">

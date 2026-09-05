@@ -2,17 +2,17 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useStore } from '../../context/StoreContext';
-import { 
-  CheckCircle2, 
-  Package, 
-  Truck, 
-  MapPin, 
-  CreditCard, 
-  Printer, 
-  ArrowRight, 
-  Clock, 
+import {
+  CheckCircle2,
+  Package,
+  Truck,
+  MapPin,
+  CreditCard,
+  Printer,
+  ArrowRight,
+  Clock,
   ShieldCheck,
-  Sparkles 
+  Sparkles
 } from 'lucide-react';
 
 export const OrderConfirmationView = () => {
@@ -40,19 +40,19 @@ export const OrderConfirmationView = () => {
     <div className="pt-28 pb-24 bg-brand-bg dark:bg-brand-bgDark min-h-screen">
       <div className="container-custom max-w-4xl mx-auto">
         {/* Success Splash Card */}
-        <div className="bg-brand-surface dark:bg-brand-surfaceDark border border-brand-border dark:border-brand-borderDark rounded-3xl p-8 sm:p-12 text-center shadow-2xl mb-12 animate-fade-in relative overflow-hidden">
+        <div className="bg-brand-surface dark:bg-brand-surfaceDark border border-brand-border dark:border-brand-borderDark rounded-3xl p-5 sm:p-8 md:p-12 text-center shadow-2xl mb-12 animate-fade-in relative overflow-hidden">
           {/* Background red glow */}
           <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-red/10 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="w-16 h-16 rounded-full bg-brand-red/20 border border-brand-red/40 flex items-center justify-center mx-auto mb-6 text-brand-red">
-            <CheckCircle2 className="w-8 h-8" />
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-red/20 border border-brand-red/40 flex items-center justify-center mx-auto mb-6 text-brand-red">
+            <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8" />
           </div>
 
-          <span className="text-xs font-mono text-brand-red uppercase tracking-widest block mb-2 font-bold">
+          <span className="text-[11px] sm:text-xs font-mono text-brand-red uppercase tracking-widest block mb-2 font-bold">
             अनर्थक ALLOCATION CONFIRMED
           </span>
 
-          <h1 className="font-syne text-3xl sm:text-5xl font-extrabold text-brand-black dark:text-white tracking-tight mb-4 uppercase">
+          <h1 className="font-syne text-2xl sm:text-4xl md:text-5xl font-extrabold text-brand-black dark:text-white tracking-tight mb-4 uppercase break-words leading-tight px-1">
             Dhanyavaad for Your Patronage
           </h1>
 
@@ -60,17 +60,17 @@ export const OrderConfirmationView = () => {
             Your piece has been registered in the Anarthak drop records. Our team in Tirupur is packaging your heavyweight streetwear garment with our signature anti-counterfeit seal.
           </p>
 
-          <div className="inline-flex flex-wrap items-center justify-center gap-4 bg-brand-bg dark:bg-brand-black border border-brand-border dark:border-brand-borderDark rounded-full px-6 py-2.5 text-xs font-mono text-brand-grey dark:text-zinc-300">
+          <div className="inline-flex flex-col sm:flex-row flex-wrap items-center justify-center gap-1.5 sm:gap-4 bg-brand-bg dark:bg-brand-black border border-brand-border dark:border-brand-borderDark rounded-2xl sm:rounded-full px-4 sm:px-6 py-2.5 text-[11px] sm:text-xs font-mono text-brand-grey dark:text-zinc-300 max-w-full">
             <span>ORDER NUMBER: <strong className="text-brand-red">{order.id}</strong></span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>BLUEDART AWB: <strong className="text-brand-black dark:text-white">{order.trackingNumber}</strong></span>
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mt-8 w-full max-w-md mx-auto">
             <Link
               to="/account"
-              className="btn-anarthak-red text-xs py-3 px-6 uppercase font-bold tracking-wider flex items-center gap-2"
+              className="btn-anarthak-red text-xs py-3.5 px-6 uppercase font-bold tracking-wider flex items-center justify-center gap-2 w-full sm:w-auto text-center"
             >
               <span>TRACK ORDER IN ACCOUNT</span>
               <ArrowRight className="w-4 h-4" />
@@ -78,7 +78,7 @@ export const OrderConfirmationView = () => {
 
             <button
               onClick={handlePrint}
-              className="btn-anarthak-dark text-xs py-3 px-6 uppercase font-mono tracking-wider cursor-pointer flex items-center gap-2"
+              className="btn-anarthak-dark text-xs py-3.5 px-6 uppercase font-mono tracking-wider cursor-pointer flex items-center justify-center gap-2 w-full sm:w-auto text-center"
             >
               <Printer className="w-4 h-4" />
               <span>PRINT TAX INVOICE</span>
@@ -87,15 +87,15 @@ export const OrderConfirmationView = () => {
         </div>
 
         {/* Visual Live Order Tracking Timeline */}
-        <div className="bg-brand-surface dark:bg-brand-surfaceDark border border-brand-border dark:border-brand-borderDark rounded-2xl p-6 sm:p-8 mb-12 space-y-6">
-          <div className="flex items-center justify-between pb-4 border-b border-brand-border dark:border-brand-borderDark">
+        <div className="bg-brand-surface dark:bg-brand-surfaceDark border border-brand-border dark:border-brand-borderDark rounded-2xl p-5 sm:p-8 mb-12 space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-brand-border dark:border-brand-borderDark">
             <div>
               <h3 className="font-syne text-lg font-bold text-brand-black dark:text-white uppercase">
-                Live Indian Courier Tracking
+                Live Express Courier Tracking
               </h3>
               <p className="text-xs font-mono text-brand-grey">Courier Partner: {order.carrier || 'Bluedart Express'}</p>
             </div>
-            <span className="text-xs font-mono text-brand-red bg-brand-red/10 px-2.5 py-1 rounded border border-brand-red/20 font-bold">
+            <span className="self-start sm:self-auto text-xs font-mono text-brand-red bg-brand-red/10 px-2.5 py-1 rounded border border-brand-red/20 font-bold">
               STATUS: {order.status.toUpperCase()}
             </span>
           </div>
@@ -103,11 +103,10 @@ export const OrderConfirmationView = () => {
           <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 relative">
             {order.timeline.map((step, idx) => (
               <div key={idx} className="flex sm:flex-col items-center sm:text-center gap-3 sm:gap-2">
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center font-mono text-xs font-bold ${
-                  step.completed 
-                    ? 'bg-brand-red text-white shadow-lg ring-2 ring-brand-red/30' 
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center font-mono text-xs font-bold ${step.completed
+                    ? 'bg-brand-red text-white shadow-lg ring-2 ring-brand-red/30'
                     : 'bg-brand-border dark:bg-zinc-800 text-brand-grey'
-                }`}>
+                  }`}>
                   {step.completed ? <CheckCircle2 className="w-4 h-4" /> : idx + 1}
                 </div>
                 <div>

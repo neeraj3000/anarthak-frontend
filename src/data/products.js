@@ -1,5 +1,5 @@
 // src/data/products.js
-// Indian Luxury Heavyweight Streetwear Catalog for ANARTHAK (अनर्थक) — "Not like them"
+// Luxury Heavyweight Streetwear Catalog for ANARTHAK (अनर्थक) — "Not like them"
 
 export const PRODUCTS = [
   {
@@ -15,8 +15,8 @@ export const PRODUCTS = [
     gsm: 320,
     fit: "Boxy Drop-Shoulder",
     category: "Heavyweight",
-    tagline: "Not like them. Architectural silhouette built for the Indian street.",
-    description: "Constructed from 320 GSM extra-long staple combed cotton milled in Tirupur. Features our signature 1.25-inch high-ribbed collar, dropped shoulders, and blind-stitched hem. Pre-shrunk industrial enzyme wash ensures zero shape distortion in Indian climate.",
+    tagline: "Not like them. Architectural silhouette built for the street.",
+    description: "Constructed from 320 GSM extra-long staple combed cotton milled in Tirupur. Features our signature 1.25-inch high-ribbed collar, dropped shoulders, and blind-stitched hem. Pre-shrunk industrial enzyme wash ensures zero shape distortion in tropical climate.",
     specs: {
       fabric: "100% Tirupur Combed Long-Staple Cotton",
       weight: "320 GSM (Heavyweight)",
@@ -66,7 +66,7 @@ export const PRODUCTS = [
     tagline: "Unapologetic volume with fluid micro-suede brushed hand-feel.",
     description: "Engineered with exaggerated drop-shoulders and a relaxed drape. Milled using organic Coimbatore cotton treated with a micro-suede brush technique that delivers supreme skin comfort without losing structural weight.",
     specs: {
-      fabric: "100% Certified Organic Indian Cotton",
+      fabric: "100% Certified Organic Cotton",
       weight: "290 GSM",
       origin: "Coimbatore, Tamil Nadu",
       dyeMethod: "Low-Impact Garment Dye",
@@ -111,7 +111,7 @@ export const PRODUCTS = [
     tagline: "High-density puff screenprint reading 'अनर्थक — NOT LIKE THEM'.",
     description: "Our signature manifesto piece. Knitted on slow loopwheel tubular frames in Kishangarh. Features tactile high-density matte puff screen-printing in crimson red and industrial grey. Completely seamless sides.",
     specs: {
-      fabric: "100% Indian Heavyweight Loopwheel Cotton",
+      fabric: "100% Heavyweight Loopwheel Cotton",
       weight: "340 GSM (Master Heavyweight)",
       origin: "Kishangarh, Rajasthan",
       dyeMethod: "Stonewashed Mineral Wash",
@@ -200,7 +200,7 @@ export const PRODUCTS = [
     tagline: "Laser-cut raw edge with hidden anti-fray stay stitch.",
     description: "Designed for minimal purists. Features a laser-cut raw bottom hem reinforced with interior blind stitching to prevent unraveling while ensuring a clean drape over denim or cargo trousers.",
     specs: {
-      fabric: "100% Indian Supima Blend",
+      fabric: "100% Supima Blend",
       weight: "260 GSM",
       origin: "Tirupur, Tamil Nadu",
       dyeMethod: "Reactive Deep Dye",
@@ -244,7 +244,7 @@ export const PRODUCTS = [
     tagline: "Micro-embroidered crimson red Devanagari signature on chest & nape.",
     description: "Embroidered using high-density Madeira red thread on the chest and center nape. Crafted from heavy French Terry jersey with a looped interior that regulates temperature across warm Mumbai days and cold Delhi nights.",
     specs: {
-      fabric: "100% Indian French Terry Cotton",
+      fabric: "100% French Terry Cotton",
       weight: "310 GSM",
       origin: "Ludhiana, Punjab",
       dyeMethod: "Pigment Overdyed Charcoal",
@@ -286,7 +286,7 @@ export const PRODUCTS = [
     fit: "Boxy Drop-Shoulder",
     category: "Graphic Tees",
     tagline: "Matte silicone typography on flank: 'ANARTHAK // NOT LIKE THEM'.",
-    description: "Modernist brutalism meets Indian street typography. The silicone print catches the light with matte precision without peeling or cracking. Holds crisp structure across all seasons.",
+    description: "Modernist brutalism meets raw street typography. The silicone print catches the light with matte precision without peeling or cracking. Holds crisp structure across all seasons.",
     specs: {
       fabric: "100% Combed Ring-Spun Cotton",
       weight: "300 GSM",
@@ -332,7 +332,7 @@ export const PRODUCTS = [
     tagline: "Substantial 330 GSM jersey with elongated 2.5-inch ribbed storm cuffs.",
     description: "Heavier than ordinary tees, doubles as light knitwear. Built with high-recovery ribbed storm cuffs and extended torso proportions. Pairs effortlessly with raw denim or cargo pants.",
     specs: {
-      fabric: "100% Indian Combed Cotton",
+      fabric: "100% Combed Cotton",
       weight: "330 GSM",
       origin: "Tirupur, Tamil Nadu",
       dyeMethod: "Yarn-Dyed Deep Charcoal",

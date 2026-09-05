@@ -116,7 +116,7 @@ export const SizeGuideModal = () => {
             <div className="bg-brand-bg dark:bg-[#18181E] border border-brand-border dark:border-zinc-800 p-4 rounded-lg">
               <h4 className="text-xs font-bold uppercase tracking-wider mb-2 font-mono flex items-center gap-1.5 text-brand-red">
                 <Check className="w-3.5 h-3.5" />
-                Indian Streetwear Fit Rule
+                Streetwear Silhouette Fit Rule
               </h4>
               <p className="text-xs text-brand-grey leading-relaxed">
                 Our silhouettes are intentionally designed with a dropped shoulder and structured chest. Take your true size for our signature oversized boxy drape.
@@ -129,7 +129,7 @@ export const SizeGuideModal = () => {
                 Anti-Bacon Ribbed Collar
               </h4>
               <p className="text-xs text-brand-grey leading-relaxed">
-                Each neckband features 2x2 elastane-reinforced Indian ribbing. Guaranteed to retain its tight circular form wash after wash.
+                Each neckband features 2x2 elastane-reinforced ribbing. Guaranteed to retain its tight circular form wash after wash.
               </p>
             </div>
           </div>

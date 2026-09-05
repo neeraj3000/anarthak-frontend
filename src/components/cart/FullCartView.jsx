@@ -101,7 +101,7 @@ export const FullCartView = () => {
               {freeShippingRemaining > 0 ? (
                 <span>Add <strong className="text-[#FF1E27]">{formatPrice(freeShippingRemaining)}</strong> more for Free Bluedart Air Courier</span>
               ) : (
-                <span className="text-[#FF1E27] font-bold">Free Pan-India Express Shipping Unlocked!</span>
+                <span className="text-[#FF1E27] font-bold">Free Express Shipping Unlocked!</span>
               )}
             </span>
             <span className="text-zinc-500">{freeShippingProgress}%</span>

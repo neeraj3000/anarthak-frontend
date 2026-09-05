@@ -6,7 +6,7 @@ export const COLLECTIONS = [
     categoryFilter: "Heavyweight",
     title: "THE 300+ GSM TIRUPUR ARCHIVE",
     subtitle: "Heavyweight Combed Cotton with High-Recovery Ribbing",
-    description: "Built to resist collar curling and hold clean architectural structure in any Indian climate.",
+    description: "Built to resist collar curling and hold clean architectural structure in any climate.",
     badge: "CORE DROP",
     itemCount: 3,
     heroImage: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1400&auto=format&fit=crop"
@@ -17,7 +17,7 @@ export const COLLECTIONS = [
     categoryFilter: "Oversized",
     title: "OVERSIZED STREET PROTOCOL",
     subtitle: "Fluid drop-shoulder silhouettes with micro-suede touch",
-    description: "Deliberate volume and lowered armhole depths engineered for authentic Indian streetwear layering.",
+    description: "Deliberate volume and lowered armhole depths engineered for authentic streetwear layering.",
     badge: "STREET REBELLION",
     itemCount: 2,
     heroImage: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1400&auto=format&fit=crop"
@@ -39,7 +39,7 @@ export const COLLECTIONS = [
     categoryFilter: "Acid Washed",
     title: "KUTCH MINERAL PATINA",
     subtitle: "18-hour cold mineral enzyme wash",
-    description: "Raw stone-distressed edges and nuanced fading inspired by western Indian desert topography.",
+    description: "Raw stone-distressed edges and nuanced fading inspired by western desert topography.",
     badge: "RAW PATINA",
     itemCount: 1,
     heroImage: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1400&auto=format&fit=crop"

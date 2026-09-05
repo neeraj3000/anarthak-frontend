@@ -14,7 +14,7 @@ export const FabricStory = () => {
       id: 0,
       title: "1.25\" High-Recovery Neck Ribbing",
       subtitle: "Anti-Bacon Dual-Needle Stay Stitch",
-      description: "Tested across Indian humidity and 80+ rigorous wash cycles. Infused with elastomeric core yarn so your collar never wrinkles, curls, or looks bacon-like.",
+      description: "Tested across extreme humidity and 80+ rigorous wash cycles. Infused with elastomeric core yarn so your collar never wrinkles, curls, or looks bacon-like.",
       stat: "Zero Baconing Guarantee",
       image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop"
     },
@@ -29,8 +29,8 @@ export const FabricStory = () => {
     {
       id: 2,
       title: "320 GSM Tirupur Combed Cotton",
-      subtitle: "Extra-Long Staple Indian Harvest",
-      description: "Zero synthetic cheap polyester. Pure long-staple Indian cotton that breathes naturally in 40°C heat while maintaining heavy outerwear weight.",
+      subtitle: "Extra-Long Staple Combed Harvest",
+      description: "Zero synthetic cheap polyester. Pure long-staple combed cotton that breathes naturally in 40°C heat while maintaining heavy outerwear weight.",
       stat: "320 Grams/m² Purity",
       image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1000&auto=format&fit=crop"
     },
@@ -98,7 +98,7 @@ export const FabricStory = () => {
                 onClick={() => setIsSizeGuideOpen(true)}
                 className="text-xs text-[#FF1E27] hover:underline flex items-center gap-1.5 cursor-pointer font-bold"
               >
-                <span>Check Indian Size & Fit Guide</span>
+                <span>Check Size & Fit Guide</span>
                 <ArrowRight className="w-3 h-3" />
               </button>
             </div>

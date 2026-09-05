@@ -2,30 +2,30 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useStore } from '../../context/StoreContext';
-import { 
-  User, 
-  Package, 
-  MapPin, 
-  CreditCard, 
-  Bell, 
-  Plus, 
-  Trash2, 
-  CheckCircle2, 
-  Clock, 
-  ChevronRight, 
-  ShieldCheck, 
-  ExternalLink 
+import {
+  User,
+  Package,
+  MapPin,
+  CreditCard,
+  Bell,
+  Plus,
+  Trash2,
+  CheckCircle2,
+  Clock,
+  ChevronRight,
+  ShieldCheck,
+  ExternalLink
 } from 'lucide-react';
 
 export const AccountView = () => {
-  const { 
-    user, 
-    orders, 
-    savedAddresses, 
-    addAddress, 
-    deleteAddress, 
-    formatPrice, 
-    showToast 
+  const {
+    user,
+    orders,
+    savedAddresses,
+    addAddress,
+    deleteAddress,
+    formatPrice,
+    showToast
   } = useStore();
 
   const [activeTab, setActiveTab] = useState('orders'); // 'orders' | 'addresses' | 'payments' | 'settings'
@@ -100,11 +100,10 @@ export const AccountView = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`pb-4 flex items-center gap-2 transition-colors cursor-pointer border-b-2 -mb-px shrink-0 ${
-                  activeTab === tab.id
+                className={`pb-4 flex items-center gap-2 transition-colors cursor-pointer border-b-2 -mb-px shrink-0 ${activeTab === tab.id
                     ? 'border-brand-red text-brand-red font-bold'
                     : 'border-transparent text-brand-grey hover:text-brand-black dark:hover:text-white'
-                }`}
+                  }`}
               >
                 <Icon className="w-4 h-4" />
                 <span>{tab.label}</span>
@@ -150,11 +149,10 @@ export const AccountView = () => {
                     </div>
 
                     <div className="flex items-center gap-3">
-                      <span className={`px-2.5 py-1 rounded text-[11px] font-bold ${
-                        order.status === 'Delivered' 
+                      <span className={`px-2.5 py-1 rounded text-[11px] font-bold ${order.status === 'Delivered'
                           ? 'bg-emerald-500/10 text-emerald-500 border border-emerald-500/20'
                           : 'bg-brand-red/10 text-brand-red border border-brand-red/20'
-                      }`}>
+                        }`}>
                         {order.status.toUpperCase()}
                       </span>
                       <button
@@ -202,7 +200,7 @@ export const AccountView = () => {
         {activeTab === 'addresses' && (
           <div className="space-y-6 animate-fade-in">
             <div className="flex justify-between items-center">
-              <h2 className="font-syne text-lg font-bold uppercase">Saved Indian Destinations</h2>
+              <h2 className="font-syne text-lg font-bold uppercase">Saved Delivery Addresses</h2>
               <button
                 onClick={() => setIsAddAddressOpen(true)}
                 className="btn-anarthak-red text-xs py-2.5 px-4 flex items-center gap-1.5 cursor-pointer uppercase font-bold"
@@ -238,23 +236,28 @@ export const AccountView = () => {
                   <div className="pt-4 mt-4 border-t border-brand-border dark:border-brand-borderDark flex justify-end">
                     <button
                       onClick={() => deleteAddress(addr.id)}
-                      className="text-xs font-mono text-brand-grey hover:text-red-500 transition-colors flex items-center gap-1 cursor-pointer"
+                      className="text-xs font-mono text-brand-grey hover:text-brand-red flex items-center gap-1 cursor-pointer transition-colors"
                     >
                       <Trash2 className="w-3.5 h-3.5" />
-                      <span>Remove</span>
+                      <span>Delete</span>
                     </button>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Modal for adding address */}
+            {/* Add Address Modal */}
             {isAddAddressOpen && (
-              <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-                <div className="fixed inset-0 bg-black/70 backdrop-blur-sm" onClick={() => setIsAddAddressOpen(false)} />
-                <div className="relative w-full max-w-lg bg-brand-surface dark:bg-brand-surfaceDark border border-brand-border dark:border-brand-borderDark rounded-xl p-6 z-10 space-y-4 animate-fade-in shadow-2xl">
-                  <h3 className="font-syne text-lg font-bold uppercase">Add Delivery Address</h3>
-                  <form onSubmit={handleCreateAddress} className="space-y-3">
+              <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+                <div className="bg-brand-surface dark:bg-brand-surfaceDark border border-brand-border dark:border-brand-borderDark rounded-2xl p-6 max-w-md w-full shadow-2xl animate-fade-in">
+                  <div className="flex items-center justify-between pb-4 border-b border-brand-border dark:border-brand-borderDark mb-4">
+                    <h3 className="font-syne text-base font-bold uppercase">Add New Address</h3>
+                    <button onClick={() => setIsAddAddressOpen(false)} className="text-brand-grey hover:text-brand-black dark:hover:text-white cursor-pointer">
+                      <X className="w-4 h-4" />
+                    </button>
+                  </div>
+
+                  <form onSubmit={handleCreateAddress} className="space-y-4 text-xs">
                     <div>
                       <label className="block text-xs font-mono text-brand-grey mb-1">Full Name</label>
                       <input
@@ -287,7 +290,7 @@ export const AccountView = () => {
                         />
                       </div>
                       <div>
-                        <label className="block text-xs font-mono text-brand-grey mb-1">PIN Code (6-Digit)</label>
+                        <label className="block text-xs font-mono text-brand-grey mb-1">PIN Code</label>
                         <input
                           type="text"
                           maxLength={6}
@@ -299,7 +302,7 @@ export const AccountView = () => {
                       </div>
                     </div>
                     <div>
-                      <label className="block text-xs font-mono text-brand-grey mb-1">Indian Mobile (+91)</label>
+                      <label className="block text-xs font-mono text-brand-grey mb-1">Mobile Number (+91)</label>
                       <input
                         type="tel"
                         value={newAddressForm.phone}
@@ -339,7 +342,7 @@ export const AccountView = () => {
                   <CreditCard className="w-6 h-6 text-brand-red" />
                   <div>
                     <h4 className="text-xs font-bold">RuPay Platinum Debit Card •••• 8819</h4>
-                    <p className="text-[11px] font-mono text-brand-grey">Expires 09/29 • Verified Indian Card</p>
+                    <p className="text-[11px] font-mono text-brand-grey">Expires 09/29 • Verified Card</p>
                   </div>
                 </div>
                 <span className="text-[10px] font-mono text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-bold">
@@ -404,9 +407,8 @@ export const AccountView = () => {
             <div className="space-y-4">
               {selectedOrderForModal.timeline.map((step, idx) => (
                 <div key={idx} className="flex items-start gap-3.5">
-                  <div className={`w-7 h-7 rounded-full flex items-center justify-center font-mono text-xs font-bold shrink-0 mt-0.5 ${
-                    step.completed ? 'bg-brand-red text-white' : 'bg-brand-border dark:bg-zinc-800 text-brand-grey'
-                  }`}>
+                  <div className={`w-7 h-7 rounded-full flex items-center justify-center font-mono text-xs font-bold shrink-0 mt-0.5 ${step.completed ? 'bg-brand-red text-white' : 'bg-brand-border dark:bg-zinc-800 text-brand-grey'
+                    }`}>
                     {step.completed ? <CheckCircle2 className="w-4 h-4" /> : idx + 1}
                   </div>
                   <div>

@@ -45,7 +45,7 @@ export const ProductDetailView = () => {
   const [isZoomed, setIsZoomed] = useState(false);
   const [openAccordion, setOpenAccordion] = useState('specs');
 
-  // Indian Pincode Checker Simulation
+  // Pincode Checker Simulation
   const [pincode, setPincode] = useState('');
   const [pincodeStatus, setPincodeStatus] = useState(null);
 
@@ -54,7 +54,7 @@ export const ProductDetailView = () => {
   const handleCheckPincode = (e) => {
     e.preventDefault();
     if (!pincode || pincode.length !== 6) {
-      setPincodeStatus({ valid: false, message: 'Please enter a valid 6-digit Indian PIN code' });
+      setPincodeStatus({ valid: false, message: 'Please enter a valid 6-digit PIN code' });
       return;
     }
     setPincodeStatus({ 
@@ -160,7 +160,7 @@ export const ProductDetailView = () => {
                     {'★'.repeat(5)}
                   </div>
                   <span className="font-bold text-[var(--text-primary)]">{product.rating}</span>
-                  <span>({product.reviewCount} Indian Patrons)</span>
+                  <span>({product.reviewCount} Verified Patrons)</span>
                 </div>
               </div>
 
@@ -232,7 +232,7 @@ export const ProductDetailView = () => {
                     className="text-[#FF1E27] hover:underline flex items-center gap-1 cursor-pointer font-bold"
                   >
                     <Ruler className="w-3.5 h-3.5" />
-                    <span>Indian Size Guide</span>
+                    <span>Size Guide</span>
                   </button>
                 </div>
 
@@ -258,7 +258,7 @@ export const ProductDetailView = () => {
                 </div>
               </div>
 
-              {/* Indian Pincode Delivery Checker */}
+              {/* Pincode Delivery Checker */}
               <div className="bg-[var(--bg-secondary)] border border-[var(--border-subtle)] p-4 rounded-xl mb-6 font-mono">
                 <div className="flex items-center gap-2 text-xs font-bold text-[var(--text-primary)] mb-2">
                   <MapPin className="w-4 h-4 text-[#FF1E27]" />
@@ -374,14 +374,14 @@ export const ProductDetailView = () => {
               onClick={() => setOpenAccordion(openAccordion === 'care' ? null : 'care')}
               className="w-full py-5 flex items-center justify-between text-left text-sm font-bold uppercase tracking-wider text-[var(--text-primary)] hover:text-[#FF1E27] transition-colors cursor-pointer"
             >
-              <span>02. Indian Climate Care Protocol</span>
+              <span>02. Climate Care Protocol</span>
               {openAccordion === 'care' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
             </button>
             {openAccordion === 'care' && (
               <div className="pb-6 text-xs text-[var(--text-secondary)] leading-relaxed space-y-2 animate-fade-in font-light">
                 <p>• Machine wash cold (30°C) with dark garments using gentle liquid detergent.</p>
                 <p>• Do not use harsh bleaching agents or fabric softeners that break cotton fibers.</p>
-                <p>• Line dry in shade; avoid harsh direct Indian midday sunlight to preserve deep black/crimson pigment.</p>
+                <p>• Line dry in shade; avoid harsh direct midday sunlight to preserve deep black/crimson pigment.</p>
                 <p>• Iron inside out at medium heat; never touch irons to puff printed typography.</p>
               </div>
             )}
@@ -392,15 +392,15 @@ export const ProductDetailView = () => {
               onClick={() => setOpenAccordion(openAccordion === 'shipping' ? null : 'shipping')}
               className="w-full py-5 flex items-center justify-between text-left text-sm font-bold uppercase tracking-wider text-[var(--text-primary)] hover:text-[#FF1E27] transition-colors cursor-pointer"
             >
-              <span>03. Pan-India Delivery & Cash on Delivery (COD)</span>
+              <span>03. Express Delivery & Cash on Delivery (COD)</span>
               {openAccordion === 'shipping' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
             </button>
             {openAccordion === 'shipping' && (
               <div className="pb-6 text-xs text-[var(--text-secondary)] leading-relaxed space-y-2 animate-fade-in font-light">
                 <p>• Dispatched via Bluedart Apex Air Express from our central fulfillment hub.</p>
-                <p>• Free shipping across India on orders exceeding ₹1,999.</p>
+                <p>• Free shipping on orders exceeding ₹1,999.</p>
                 <p>• Cash on Delivery (COD) is available with OTP verification.</p>
-                <p>• 7-day doorstep exchange or return pickup across 19,000+ Indian pincodes.</p>
+                <p>• 7-day doorstep exchange or return pickup across 19,000+ pincodes.</p>
               </div>
             )}
           </div>
@@ -411,7 +411,7 @@ export const ProductDetailView = () => {
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
             <div>
               <span className="text-xs font-mono text-[#FF1E27] uppercase tracking-widest block mb-1 font-bold">
-                VERIFIED INDIAN PATRON REVIEWS
+                VERIFIED PATRON REVIEWS
               </span>
               <h3 className="font-editorial text-2xl sm:text-3xl font-black text-[var(--text-primary)]">
                 CUSTOMER PRAISE ({product.reviewCount})

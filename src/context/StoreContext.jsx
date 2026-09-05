@@ -132,7 +132,7 @@ export const StoreProvider = ({ children }) => {
     memberSince: '2024'
   });
 
-  // Currency Formatter for Indian Rupees (₹)
+  // Currency Formatter for Rupees (₹)
   const formatPrice = (amount) => {
     return `₹${Math.round(amount).toLocaleString('en-IN')}`;
   };
@@ -368,7 +368,7 @@ export const StoreProvider = ({ children }) => {
       status: 'Order Placed',
       trackingNumber: `BD-AIR-${Math.floor(10000000 + Math.random() * 90000000)}`,
       carrier: orderData.shippingMethod?.carrier || 'Bluedart Apex Air',
-      estimatedDelivery: '2-3 Days across India',
+      estimatedDelivery: '2-3 Business Days',
       shippingAddress: orderData.shippingAddress,
       shippingMethod: orderData.shippingMethod,
       paymentMethod: orderData.paymentMethod,

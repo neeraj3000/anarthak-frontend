@@ -20,7 +20,7 @@ import {
   AlertCircle
 } from 'lucide-react';
 
-const INDIAN_STATES = [
+const STATES_LIST = [
   'Maharashtra', 'Delhi NCR', 'Karnataka', 'Tamil Nadu', 
   'Telangana', 'Gujarat', 'Uttar Pradesh', 'West Bengal', 
   'Rajasthan', 'Punjab', 'Kerala', 'Madhya Pradesh', 'Haryana'
@@ -59,7 +59,7 @@ export const CheckoutView = () => {
     {
       id: 'ship-bluedart',
       name: 'Bluedart Surface & Air Express',
-      duration: '3-4 Business Days across India',
+      duration: '3-4 Business Days',
       price: cartSubtotal >= 1999 ? 0 : 99,
       carrier: 'Bluedart Express'
     },
@@ -129,10 +129,10 @@ export const CheckoutView = () => {
       shippingMethod: selectedShipping,
       paymentMethod: {
         type: paymentType === 'upi' ? `UPI (${upiMethod.toUpperCase()})` :
-              paymentType === 'card' ? 'RuPay / Indian Card' :
+              paymentType === 'card' ? 'RuPay / Credit Card' :
               paymentType === 'netbanking' ? `Netbanking (${selectedBank})` : 'Cash on Delivery (COD)',
         last4: paymentType === 'card' ? '8819' : paymentType === 'upi' ? upiId : 'Verified',
-        brand: paymentType === 'card' ? 'RuPay Platinum' : 'Indian Gateway'
+        brand: paymentType === 'card' ? 'RuPay Platinum' : 'Payment Gateway'
       }
     };
 
@@ -168,9 +168,9 @@ export const CheckoutView = () => {
             <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-0.5 bg-brand-border dark:bg-brand-borderDark -z-0" />
             
             {[
-              { step: 1, label: 'Address', fullLabel: 'Indian Address' },
+              { step: 1, label: 'Address', fullLabel: 'Delivery Address' },
               { step: 2, label: 'Courier', fullLabel: 'Courier Logistics' },
-              { step: 3, label: 'Payment', fullLabel: 'Payment (UPI/RuPay)' },
+              { step: 3, label: 'Payment', fullLabel: 'Payment (UPI/Cards)' },
               { step: 4, label: 'Review', fullLabel: 'Review & Confirm' }
             ].map((s) => (
               <div key={s.step} className="flex flex-col items-center relative z-10">
@@ -210,7 +210,7 @@ export const CheckoutView = () => {
                 <div className="flex items-center justify-between pb-4 border-b border-brand-border dark:border-brand-borderDark">
                   <div>
                     <h2 className="font-syne text-xl font-bold text-brand-black dark:text-white uppercase">
-                      01. Indian Delivery Address
+                      01. Delivery Address
                     </h2>
                     <p className="text-xs text-brand-grey dark:text-brand-muted font-mono">Select a saved metro address or enter delivery location</p>
                   </div>
@@ -274,7 +274,7 @@ export const CheckoutView = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-mono text-brand-grey dark:text-brand-muted mb-1">Indian Mobile (+91)</label>
+                    <label className="block text-xs font-mono text-brand-grey dark:text-brand-muted mb-1">Mobile Number (+91)</label>
                     <input
                       type="tel"
                       value={addressForm.phone}
@@ -307,7 +307,7 @@ export const CheckoutView = () => {
                       onChange={(e) => setAddressForm({ ...addressForm, state: e.target.value })}
                       className="input-anarthak"
                     >
-                      {INDIAN_STATES.map((st) => (
+                      {STATES_LIST.map((st) => (
                         <option key={st} value={st}>{st}</option>
                       ))}
                     </select>
@@ -323,11 +323,11 @@ export const CheckoutView = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-mono text-brand-grey dark:text-brand-muted mb-1">Country</label>
+                    <label className="block text-xs font-mono text-brand-grey dark:text-brand-muted mb-1">Region</label>
                     <input
                       type="text"
                       disabled
-                      value="India (भारत)"
+                      value="India (All Zones)"
                       className="input-anarthak bg-brand-border/20 text-brand-grey cursor-not-allowed"
                     />
                   </div>
@@ -336,7 +336,7 @@ export const CheckoutView = () => {
                 <div className="flex justify-end pt-4">
                   <button
                     onClick={() => setCurrentStep(2)}
-                    className="btn-anarthak-red py-3.5 px-8 text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer"
+                    className="btn-anarthak-red py-3.5 px-6 sm:px-8 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto"
                   >
                     <span>Continue to Shipping</span>
                     <ArrowRight className="w-4 h-4" />
@@ -350,7 +350,7 @@ export const CheckoutView = () => {
               <div className="space-y-6 animate-fade-in">
                 <div className="pb-4 border-b border-brand-border dark:border-brand-borderDark">
                   <h2 className="font-syne text-xl font-bold text-brand-black dark:text-white uppercase">
-                    02. Indian Logistics & Couriers
+                    02. Express Logistics & Couriers
                   </h2>
                   <p className="text-xs text-brand-grey dark:text-brand-muted font-mono">Dispatched from our Tirupur fulfillment warehouse</p>
                 </div>
@@ -388,10 +388,10 @@ export const CheckoutView = () => {
                   ))}
                 </div>
 
-                <div className="flex items-center justify-between pt-4 border-t border-brand-border dark:border-brand-borderDark">
+                <div className="flex flex-col-reverse sm:flex-row sm:items-center justify-between gap-3 pt-4 border-t border-brand-border dark:border-brand-borderDark">
                   <button
                     onClick={() => setCurrentStep(1)}
-                    className="text-xs font-mono text-brand-grey hover:text-brand-black dark:hover:text-white flex items-center gap-1.5 cursor-pointer"
+                    className="text-xs font-mono text-brand-grey hover:text-brand-black dark:hover:text-white flex items-center justify-center sm:justify-start gap-1.5 py-2.5 sm:py-0 cursor-pointer"
                   >
                     <ArrowLeft className="w-3.5 h-3.5" />
                     <span>Back to Address</span>
@@ -399,29 +399,29 @@ export const CheckoutView = () => {
 
                   <button
                     onClick={() => setCurrentStep(3)}
-                    className="btn-anarthak-red py-3.5 px-8 text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer"
+                    className="btn-anarthak-red py-3.5 px-6 sm:px-8 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto"
                   >
-                    <span>Proceed to Indian Payment</span>
+                    <span>Proceed to Payment</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
               </div>
             )}
 
-            {/* STEP 3: INDIAN PAYMENT SIMULATION */}
+            {/* STEP 3: PAYMENT SIMULATION */}
             {currentStep === 3 && (
               <div className="space-y-6 animate-fade-in">
                 <div className="pb-4 border-b border-brand-border dark:border-brand-borderDark">
                   <div className="flex items-center justify-between">
                     <h2 className="font-syne text-xl font-bold text-brand-black dark:text-white uppercase">
-                      03. Indian Payment Gateway
+                      03. Payment Gateway
                     </h2>
                     <span className="text-[10px] font-mono text-brand-red bg-brand-red/10 px-2 py-0.5 rounded border border-brand-red/20 font-bold">
                       DEMO SANDBOX
                     </span>
                   </div>
                   <p className="text-xs text-brand-grey dark:text-brand-muted font-mono">
-                    All Indian payment options supported (UPI, RuPay, Netbanking, COD)
+                    All standard payment options supported (UPI, RuPay, Netbanking, COD)
                   </p>
                 </div>
 
@@ -494,7 +494,7 @@ export const CheckoutView = () => {
                   </div>
                 )}
 
-                {/* 2. RuPay / Indian Cards */}
+                {/* 2. RuPay / Credit & Debit Cards */}
                 {paymentType === 'card' && (
                   <div className="space-y-4 pt-2">
                     {/* Visual Card Preview */}
@@ -554,9 +554,9 @@ export const CheckoutView = () => {
                 {/* 3. Netbanking */}
                 {paymentType === 'netbanking' && (
                   <div className="space-y-4 pt-2">
-                    <p className="text-xs font-mono text-brand-grey">Select your Indian Bank:</p>
+                    <p className="text-xs font-mono text-brand-grey">Select your Bank:</p>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-                      {['HDFC Bank', 'State Bank of India', 'ICICI Bank', 'Axis Bank', 'Kotak Mahindra', 'Punjab National Bank'].map((bank) => (
+                      {['HDFC Bank', 'State Bank (SBI)', 'ICICI Bank', 'Axis Bank', 'Kotak Mahindra', 'Punjab National Bank'].map((bank) => (
                         <button
                           key={bank}
                           onClick={() => setSelectedBank(bank)}
@@ -706,7 +706,7 @@ export const CheckoutView = () => {
                     <span>CONFIRM & PLACE ORDER — {formatPrice(finalTotal)}</span>
                   </button>
                   <p className="text-[10px] font-mono text-brand-grey text-center">
-                    By placing your order you agree to Anarthak's 7-Day Hassle-Free Exchange Policy across all Indian pin codes.
+                    By placing your order you agree to Anarthak's 7-Day Hassle-Free Exchange Policy across all India pin codes.
                   </p>
                 </div>
               </div>
@@ -734,7 +734,7 @@ export const CheckoutView = () => {
               )}
 
               <div className="flex justify-between">
-                <span>Indian Courier Shipping</span>
+                <span>Express Courier Shipping</span>
                 <span className="text-brand-black dark:text-white">
                   {selectedShipping.price === 0 ? (
                     <span className="text-emerald-500 font-bold">COMPLIMENTARY</span>
@@ -759,7 +759,7 @@ export const CheckoutView = () => {
               <div className="pt-4 border-t border-brand-border dark:border-brand-borderDark flex justify-between items-baseline text-brand-black dark:text-white">
                 <div>
                   <span className="font-syne text-base font-bold block uppercase">FINAL TOTAL</span>
-                  <span className="text-[10px] text-brand-grey font-mono">Includes all Indian taxes</span>
+                  <span className="text-[10px] text-brand-grey font-mono">Includes all taxes & duties</span>
                 </div>
                 <span className="text-2xl font-bold font-mono text-brand-red">
                   {formatPrice(finalTotal)}
